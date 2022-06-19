@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1099387454929",
+    "project_id": "ride-booking-app-e8a95",
+    "storage_bucket": "ride-booking-app-e8a95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099387454929:android:86a0cc00ca604060f50cf0",
+        "android_client_info": {
+          "package_name": "com.elijah.ukeme.ride_booking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1099387454929-3a7mdrfo6h1t76pagiefl2qi66otq53k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCydU9wKI4xF8aXy0RyvevRlktQm2qdCaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099387454929-3a7mdrfo6h1t76pagiefl2qi66otq53k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Ride_Booking_App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme" />
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/blue_grey_600</item>
+        <item name="android:dialogTheme">@style/Dialog.Theme</item>
+    </style>
+
+    <style name="Dialog.Theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressBar.White" parent="@style/AppTheme">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="EditText.Green" parent="@style/Theme.AppCompat">
+        <item name="colorControlActivated">@color/green_500</item>
+        <item name="colorControlHighlight">@color/green_500</item>
+        <item name="colorControlNormal">@color/green_400</item>
+    </style>
+
+    <style name="EditText.White.Hint" parent="@style/EditText.White">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorHint">@color/grey_10</item>
+    </style>
+
+    <style name="EditText.White" parent="@style/AppTheme">
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+        <item name="colorControlNormal">@color/grey_10</item>
+    </style>
+
+    <style name="EditText.Grey" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/grey_60</item>
+        <item name="colorControlHighlight">@color/grey_60</item>
+        <item name="colorControlNormal">@color/grey_40</item>
+    </style>
+</resources>

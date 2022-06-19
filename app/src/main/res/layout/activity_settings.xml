@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/totlbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/close"/>
+
+                <ImageView
+                    android:id="@+id/save_button"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/save_edited_info"
+                    android:layout_marginEnd="15dp"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:layout_below="@+id/appbar_settings"
+        android:padding="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Personal Details"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"/>
+
+
+
+                    <TextView
+                        android:id="@+id/textview_profile_image_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Pick a Profile Image"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="@color/grey_40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAME"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHONE NUMBER"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_number_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADDRESS"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_address_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CITY"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_city_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COUNTRY"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_country_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGE"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_age_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MARITAL STATUS"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_marital_status_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/radio_group_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="GENDER"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40" />
+
+                            <RadioGroup
+                                android:id="@+id/gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/radio_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                    android:textColor="@color/grey_40" />
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/radio_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                    android:textColor="@color/grey_40" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+                    <LinearLayout
+                        android:id="@+id/layout_driver_details"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textview_car_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Car Details"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CAR NAME"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_car_name_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CAR PLATE NUMBER"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_car_plate_number_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CAR COLOUR"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        android:gravity="center_horizontal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_car_colour_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-4dp"
+                        android:layout_marginRight="-4dp"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40"
+                        android:textStyle="bold"
+                        android:theme="@style/EditText.Grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="20dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/car_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/car"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        android:layout_gravity="center_horizontal"
+                        app:civ_border_width="2dp"/>
+
+
+
+                    <TextView
+                        android:id="@+id/textview_car_image_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Upload your Car Image"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="@color/grey_40" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
